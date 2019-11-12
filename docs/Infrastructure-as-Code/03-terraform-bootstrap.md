@@ -12,8 +12,9 @@ Para realizar este laboratorio usted necesita:
 ## Creacion de un servidor en amazon ec2 usando terraform
 
 - Ingrese en su workstation con la ultima version del codigo
-- Ingrese a la carpeta `cd iac-terraform1`
+- Ingrese a la carpeta `cd iac-terraform2-bootstrap`
 - Examine la sintaxis del codigo
+- 
 - Para iniciar terraform corra el comando `terraform init`
 - Verifique los cambios que realizara su script corriendo `terraform plan`
 - Ingrese su nombre como nombre de instancia

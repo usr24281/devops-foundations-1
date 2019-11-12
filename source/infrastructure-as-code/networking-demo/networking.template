@@ -1,0 +1,35 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "Demo Development Environment Networking",
+  "Parameters": {
+    "SubnetsAZ": {
+      "Description": "Select the availability zones for the subnet",
+      "Type": "List<AWS::EC2::AvailabilityZone::Name>"
+    }
+  },
+  "Resources": {
+    "VPC": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3.amazonaws.com/demo-iac-bucket/infrastructure/vpc.template",
+        "Parameters": {
+          "Environment": "Development",
+          "VpcName": "Development",
+          "VPCCIDR": "10.100.0.0/16",
+          "PublicSubnetACIDR": "10.100.8.0/21",
+          "PublicSubnetBCIDR": "10.100.16.0/21",
+          "PrivateSubnetACIDR": "10.100.24.0/21",
+          "PrivateSubnetBCIDR": "10.100.32.0/21",
+          "SubnetsAZ": {
+            "Fn::Join": [
+              ",",
+              {
+                "Ref": "SubnetsAZ"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

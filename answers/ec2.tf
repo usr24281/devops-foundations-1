@@ -18,6 +18,12 @@ data "aws_ami" "amazon_linux_ec2" {
 }
 
 
+data "template_file" "user_data" {
+  template = "${file("${path.module}/template/user-data.tpl")}"
+}
+
+
+
 # Crea la maquina virtual deseada usando la variable name como nombre
 resource "aws_instance" "terraform-lab1" {
   instance_type = "${var.aws_instance_type}"
@@ -30,4 +36,5 @@ resource "aws_instance" "terraform-lab1" {
   availability_zone = "us-east-1a"
   subnet_id = "subnet-0d45a460e80029489"
   key_name = "demo"
+  user_data = "${data.template_file.user_data.rendered}"
 }

@@ -18,6 +18,8 @@ data "aws_ami" "amazon_linux_ec2" {
 }
 
 
+
+
 # Crea la maquina virtual deseada usando la variable name como nombre
 resource "aws_instance" "terraform-lab1" {
   instance_type = "${var.aws_instance_type}"
