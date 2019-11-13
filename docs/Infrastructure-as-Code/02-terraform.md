@@ -9,6 +9,15 @@ Para realizar este laboratorio usted necesita:
 - Acceso a una cuenta de AWS 
 - Un editor de texto de su preferencia
 
+## Inicio de sesion en servidor
+
+```
+ec2-3-234-154-133.compute-1.amazonaws.com
+usuario ec2-user
+```
+
+
+
 ## Creacion de un servidor en amazon ec2 usando terraform
 
 - Ingrese en su workstation con la ultima version del codigo

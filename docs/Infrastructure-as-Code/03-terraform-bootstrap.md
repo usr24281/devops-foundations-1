@@ -14,7 +14,10 @@ Para realizar este laboratorio usted necesita:
 - Ingrese en su workstation con la ultima version del codigo
 - Ingrese a la carpeta `cd iac-terraform2-bootstrap`
 - Examine la sintaxis del codigo
-- 
+- Verifique la sintaxis del objeto [template](https://www.terraform.io/docs/providers/template/d/file.html)
+- Verifique la sintaxis del objeto  [ec2-instance](https://www.terraform.io/docs/providers/aws/r/instance.html)
+- Edite su archivo para cumplir la sintaxis
+- Compare su resultado con el resultado en respuestas 
 - Para iniciar terraform corra el comando `terraform init`
 - Verifique los cambios que realizara su script corriendo `terraform plan`
 - Ingrese su nombre como nombre de instancia

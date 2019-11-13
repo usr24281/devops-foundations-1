@@ -3,5 +3,4 @@ nav:
     - Home: index.md
     - Infrastructure-as-Code:
         - Labs: Infrastructure-as-Code/labs.md
-        - Git: Infrastructure-as-Code/cvs-git.md
 theme: readthedocs
