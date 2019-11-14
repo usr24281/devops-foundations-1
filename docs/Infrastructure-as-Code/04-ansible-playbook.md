@@ -18,42 +18,9 @@ El objetivo de este laboratorio es utilizar un configuration management como ans
 
 ### Connecion al servidor
 
-- Ingrese en su workstation con la ultima version del codigo
-- Examine la sintaxis del codigo puede user visual studio code pare ello
-- Verifique la sintaxis del objeto [template](https://www.terraform.io/docs/providers/template/d/file.html)
-- Verifique la sintaxis del objeto  [ec2-instance](https://www.terraform.io/docs/providers/aws/r/instance.html)
-- Edite su archivo para cumplir la sintaxis puede usar su copia local y visual studio code para hacer mas simple la visualizacion y la edicion del codigo, trate de escribir el codigo usted.
-- Compare su resultado con el resultado en respuestas `/answers/terraform-boostrap` y corrija lo necesario 
-
-### Ejecutar Terraform para crear el servidor
-
-<script id="asciicast-BDMI8QNqQVrDlIl3fDYgcB14k" src="https://asciinema.org/a/BDMI8QNqQVrDlIl3fDYgcB14k.js" async></script>
-
-- Para iniciar terraform corra el comando `terraform init`
-- Verifique los cambios que realizara su script corriendo `terraform plan`
-- Ingrese su nombre como nombre de instancia
-```
-var.name
-  Enter a value: dlopez
-```
-- Si todo esta bien deberia ver una salida similar a esta 
-```
-Plan: 4 to add, 0 to change, 0 to destroy.
-```
-- Cree la instancia usando el comando `terraform apply` 
-- Ingrese su nombre como nombre de instancia
-```
-var.name
-  Enter a value: dlopez
-```
-- Ingrese yes para crear los recursos
-
-```
-o you want to perform these actions?
-  Terraform will perform the actions described above.
-  Only 'yes' will be accepted to approve.
-
-  Enter a value: yes
-```
+- Ingrese en a la workstation usando el usuario ec2-user 
+- Conectese a la instancia creada en el ejercicio anterior consulte el IP al instructor `ssh -i "demo.pem" ec2-user@<IP>`
+- Cambie al usuario root con el comando `sudo -i`
+- 
 
 
