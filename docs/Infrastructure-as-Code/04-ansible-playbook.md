@@ -20,7 +20,11 @@ El objetivo de este laboratorio es utilizar un configuration management como ans
 
 - Ingrese en a la workstation usando el usuario ec2-user 
 - Conectese a la instancia creada en el ejercicio anterior consulte el IP al instructor `ssh -i "demo.pem" ec2-user@<IP>`
-- Cambie al usuario root con el comando `sudo -i`
-- 
+- Clone el repositorio corriendo el comando `git clone https://github.com/DouglasLopez/devops-foundations.git`
+- Cambie al directorio del ejercicio 3 corriendo `cd devops-foundations/source/infrastructure-as-code/ansible3/`
+- Verifique que ansible esta instalado y funcionando corriendo `ansible --version`
+- Corra el playbook de ansible con el comando ansible-playbook `ansible-playbook ansible-playbook.yml`
+- Verifique la instalacion de docker corriendo el comando `docker --version` y `docker ps`
 
 
+<script id="asciicast-0OQDdPgSqtn8B5k1dI0N3y0RH" src="https://asciinema.org/a/0OQDdPgSqtn8B5k1dI0N3y0RH.js" async></script>
