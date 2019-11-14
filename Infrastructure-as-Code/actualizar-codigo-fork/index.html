@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Base - Devops Foundations Devops.gt</title>
+  <title>Actualizar Codigo - Devops Foundations Devops.gt</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -17,8 +17,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Base";
-    var mkdocs_page_input_path = "base/Conectarse-ssh.md";
+    var mkdocs_page_name = "Actualizar Codigo";
+    var mkdocs_page_input_path = "Infrastructure-as-Code/actualizar-codigo-fork.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -59,17 +59,30 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../../Infrastructure-as-Code/labs/">Labs</a>
+    <a class="" href="../labs/">Labs</a>
                 </li>
     </ul>
 	    </li>
           
+            <li class="toctree-l1">
+		
+    <a class="" href="../Conectarse-ssh/">Connecion SSH</a>
+	    </li>
+          
             <li class="toctree-l1 current">
 		
-    <a class="current" href="./">Base</a>
+    <a class="current" href="./">Actualizar Codigo</a>
     <ul class="subnav">
             
-    <li class="toctree-l2"><a href="#conecion-a-ssh-usando-gitbash">Conecion a SSH usando gitbash</a></li>
+    <li class="toctree-l2"><a href="#actualizar-su-version-del-codigo">Actualizar su version del codigo</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#objetivo">Objetivo</a></li>
+        
+            <li><a class="toctree-l3" href="#pasos">Pasos</a></li>
+        
+        </ul>
     
 
     </ul>
@@ -97,7 +110,7 @@
     
       
     
-    <li>Base</li>
+    <li>Actualizar Codigo</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -107,17 +120,23 @@
           <div role="main">
             <div class="section">
               
-                <h2 id="conecion-a-ssh-usando-gitbash">Conecion a SSH usando gitbash</h2>
-<ul>
-<li>Ingrese a gitbash en su instalacion local</li>
-<li>Ingrese  el comando <code>ssh ec2-user@3.234.154.133</code> para conectarse a la instancia de laboratorio</li>
-<li>Ingrese el password compartido</li>
-<li>Cambie a su usuario ejemplo <code>sudo su dlopez</code></li>
-<li>Cambiese a su directorio home con el comando <code>cd /home/dlopez/</code> </li>
-<li>Puede iniciar su trabajo</li>
-</ul>
-<p><strong>Puede pausar y copiar los comandos del video</strong></p>
-<script id="asciicast-GEIFqSkKZSvxBJ8PBZwuYpOFG" src="https://asciinema.org/a/GEIFqSkKZSvxBJ8PBZwuYpOFG.js" async></script>
+                <h1 id="actualizar-su-version-del-codigo">Actualizar su version del codigo</h1>
+<h2 id="objetivo">Objetivo</h2>
+<p>El objetivo de este lab es actualizar su version del codigo en fork a la version mas reciente de un repositorio remoto distinto al suyo</p>
+<h2 id="pasos">Pasos</h2>
+<ol>
+<li>Ingrese a la maquina de laboratorio <code>ssh ec2-user@3.234.154.133</code> con la contraseña compartida</li>
+<li>Cambie a su usuario <code>sudo su enriquer</code></li>
+<li>Ingrese a su directorio home ejemplo <code>cd /home/enriquer/</code></li>
+<li>Clone <strong>su repositorio</strong> 'git clone https://github.com/meroman/' si no lo tiene ya clonado</li>
+<li>Verifique cuales son los repositorios remotos asociados a su repo corriendo <code>git remote -v</code></li>
+<li>Agrege el repositorio <strong>original</strong> del curso como otra fuente remota <code>git remote add upstream https://github.com/DouglasLopez/devops-foundations.git</code></li>
+<li>Verifique los cambios <code>git remote -v</code></li>
+<li>Actualice los cambios nuevos en el repositorio original corriendo <code>git pull upstream master</code></li>
+<li>Suba los cambios a su repositorio remoto con el comando <code>git push origin master</code></li>
+</ol>
+<p><strong>Puede copiar los comandos directamente del video</strong>
+<script id="asciicast-CxIzRDJEno3j7sbYq7XSriupY" src="https://asciinema.org/a/CxIzRDJEno3j7sbYq7XSriupY.js" async></script></p>
               
             </div>
           </div>
@@ -126,7 +145,7 @@
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
       
-        <a href="../../Infrastructure-as-Code/labs/" class="btn btn-neutral" title="Labs"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Conectarse-ssh/" class="btn btn-neutral" title="Connecion SSH"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -152,7 +171,7 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../../Infrastructure-as-Code/labs/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../Conectarse-ssh/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
     </span>

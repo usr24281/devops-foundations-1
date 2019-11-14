@@ -66,7 +66,12 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../../base/Conectarse-ssh/">Base</a>
+    <a class="" href="../Conectarse-ssh/">Connecion SSH</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../actualizar-codigo-fork/">Actualizar Codigo</a>
 	    </li>
           
         </ul>
@@ -106,19 +111,24 @@
 <p>Para realizar este laboratorio usted necesita:</p>
 <ul>
 <li>Conocimiento de utilizacion de git si no lo tiene verifique el laboratorio <a href="../01-cvs-git/">cvs-git</a></li>
-<li>Workstation con terraform instalado</li>
-<li>Acceso a una cuenta de AWS </li>
+<li>Workstation con terraform instalado <a href="../Conectarse-ssh/">conectarse ssh</a></li>
+<li>Ultima version del codigo de laboratorio <a href="../actualizar-codigo-fork/">actualizar codigo</a></li>
 <li>Un editor de texto de su preferencia</li>
 </ul>
+<h2 id="objetivo">Objetivo</h2>
+<p>El objetivo de este laboratorio es instalar los paquetes ansible, docker, y git en un servidor nuevo haciendo bootstraping agregando el parametro userdata a terraform</p>
 <h2 id="creacion-de-un-servidor-en-amazon-ec2-usando-terraform">Creacion de un servidor en amazon ec2 usando terraform</h2>
+<h3 id="edicion-de-codigo">Edicion de codigo</h3>
 <ul>
 <li>Ingrese en su workstation con la ultima version del codigo</li>
-<li>Ingrese a la carpeta <code>cd iac-terraform2-bootstrap</code></li>
-<li>Examine la sintaxis del codigo</li>
+<li>Examine la sintaxis del codigo puede user visual studio code pare ello</li>
 <li>Verifique la sintaxis del objeto <a href="https://www.terraform.io/docs/providers/template/d/file.html">template</a></li>
 <li>Verifique la sintaxis del objeto  <a href="https://www.terraform.io/docs/providers/aws/r/instance.html">ec2-instance</a></li>
-<li>Edite su archivo para cumplir la sintaxis</li>
-<li>Compare su resultado con el resultado en respuestas </li>
+<li>Edite su archivo para cumplir la sintaxis puede usar su copia local y visual studio code para hacer mas simple la visualizacion y la edicion del codigo, trate de escribir el codigo usted.</li>
+<li>Compare su resultado con el resultado en respuestas <code>/answers/terraform-boostrap</code> y corrija lo necesario </li>
+</ul>
+<h3 id="ejecutar-terraform-para-crear-el-servidor">Ejecutar Terraform para crear el servidor</h3>
+<ul>
 <li>Para iniciar terraform corra el comando <code>terraform init</code></li>
 <li>Verifique los cambios que realizara su script corriendo <code>terraform plan</code></li>
 <li>Ingrese su nombre como nombre de instancia</li>
