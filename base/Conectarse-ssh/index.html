@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Git demo y Laboratorio - Devops Foundations Devops.gt</title>
+  <title>Base - Devops Foundations Devops.gt</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -17,8 +17,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Git demo y Laboratorio";
-    var mkdocs_page_input_path = "Infrastructure-as-Code/01-cvs-git.md";
+    var mkdocs_page_name = "Base";
+    var mkdocs_page_input_path = "base/Conectarse-ssh.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -59,14 +59,20 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../labs/">Labs</a>
+    <a class="" href="../../Infrastructure-as-Code/labs/">Labs</a>
                 </li>
     </ul>
 	    </li>
           
-            <li class="toctree-l1">
+            <li class="toctree-l1 current">
 		
-    <a class="" href="../../base/Conectarse-ssh/">Base</a>
+    <a class="current" href="./">Base</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#conecion-a-ssh-usando-gitbash">Conecion a SSH usando gitbash</a></li>
+    
+
+    </ul>
 	    </li>
           
         </ul>
@@ -91,7 +97,7 @@
     
       
     
-    <li>Git demo y Laboratorio</li>
+    <li>Base</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -101,41 +107,28 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="git-demo-y-laboratorio">Git demo y Laboratorio</h1>
-<h2 id="prerrequisitos">Prerrequisitos</h2>
+                <h2 id="conecion-a-ssh-usando-gitbash">Conecion a SSH usando gitbash</h2>
 <ul>
-<li>Instalacion de git en el sistema <a href="https://git-scm.com/book/es/v1/Empezando-Instalando-Git">Tutorial de Instalacion</a></li>
-<li>Una cuenta de github configurada <a href="https://github.com/join">Configuracion de cuenta de Git</a></li>
+<li>Ingrese a gitbash en su instalacion local</li>
+<li>Ingrese  el comando <code>ssh ec2-user@3.234.154.133</code> para conectarse a la instancia de laboratorio</li>
+<li>Ingrese el password compartido</li>
+<li>Cambio a su usuario <code>sudo su dlopez</code></li>
+<li>Cambiese a su directorio home con el comando <code>cd /home/dlopez/</code> </li>
+<li>Puede iniciar su trabajo</li>
 </ul>
-<h2 id="laboratorio-git">Laboratorio-Git</h2>
-<ol>
-<li>
-<p>Antes de Usar git para este laboratorio, necesita configurar su cuenta de git utilizando el siguiente comando <code>git config --global user.name "&lt;Nombre de Usuario&gt;"</code></p>
-</li>
-<li>
-<p>Agregue a la configuración de git su dirección de correo <code>git config --global user.email "&lt;Micorreo@midominio.com&gt;"</code></p>
-</li>
-<li>Ingrese a su cuenta de git <a href="https://github.com">https://github.com</a></li>
-<li>Ingrese al link de este repositorio <a href="https://github.com/DouglasLopez/devops-foundations">Repo URL</a></li>
-<li>Haga click en "Fork" para crear una copia de este repositorio dentro de su cuenta de Github.</li>
-<li>Haga clic en "Clone or Download" para obtener la dirección de https para el repositorio recientemente creado.</li>
-<li>Clone el repositorio usando el comando <code>git clone &lt;HTTPS URL del paso previo&gt;</code></li>
-<li>Ingrese al directorio donde ha clonado el repositorio y use el comando <code>ls -la</code></li>
-<li>Observe el directorio <code>.git</code> este directorio contiene toda la información del control de versiones, esta es su copia local del mismo.</li>
-<li>Corra el comando <code>git log</code> y podrá observar el historial de todos los cambios</li>
-<li>Corra el comando <code>git remote</code> para ver la lista de repositorios remotos asociados a su copia local</li>
-<li>Corra el comando <code>git remote -v</code> para ver información más detallada acerca de el repositorio remoto</li>
-<li>Cree un nuevo archivo <code>mi_archivo.txt</code>. y el comando <code>echo "este es un archivo nuevo"&gt; mi_archivo.txt</code></li>
-<li>Con el comando <code>git status</code> puede ver el estado actual de su repositorio el archivo <code>mi_archivo.txt</code> aparecer como <code>untracked</code></li>
-<li>Agregue su archivo al cvs con el comando <code>git add mi_archivo.txt</code></li>
-<li>Corra el comando <code>git commit</code> para agregar sus cambios al repositorio estos cambios estaran almacenados solamente en su copia local</li>
-<li>Para agregar sus cambios al repositorio remoto corra el comando <code>git push origin master</code></li>
-<li>Verifique en su cuenta de github si el cambio se ve reflejado en el repositorio</li>
-</ol>
+<p><strong>Puede pausar y copiar los comandos del video</strong></p>
+<script id="asciicast-GEIFqSkKZSvxBJ8PBZwuYpOFG" src="https://asciinema.org/a/GEIFqSkKZSvxBJ8PBZwuYpOFG.js" async></script>
               
             </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../../Infrastructure-as-Code/labs/" class="btn btn-neutral" title="Labs"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -158,6 +151,8 @@
   <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
       
+      
+        <span><a href="../../Infrastructure-as-Code/labs/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
     </span>
