@@ -1,22 +1,22 @@
-# IAC Terraform Lab
+# IAC Configuration Management Ansible
 
 ## Prerrequisitos
 
 Para realizar este laboratorio usted necesita:
 
 - Conocimiento de utilizacion de git si no lo tiene verifique el laboratorio [cvs-git](01-cvs-git.md)
-- Workstation con terraform instalado [conectarse ssh](Conectarse-ssh.md)
+- Workstation [conectarse ssh](Conectarse-ssh.md)
 - Ultima version del codigo de laboratorio [actualizar codigo](actualizar-codigo-fork.md)
-- Un editor de texto de su preferencia
+- EL servidor creado en el laboratorio anterior [terraform iac 2](03-terraform-bootstrap.md)
 
 ## Objetivo
 
-El objetivo de este laboratorio es instalar los paquetes ansible, docker, y git en un servidor nuevo haciendo bootstraping agregando el parametro userdata a terraform
+El objetivo de este laboratorio es utilizar un configuration management como ansible para realizar tareas dentro de un servidor
 
 
-## Creacion de un servidor en amazon ec2 usando terraform
+## Uso de Ansible
 
-### Edicion de codigo
+### Connecion al servidor
 
 - Ingrese en su workstation con la ultima version del codigo
 - Examine la sintaxis del codigo puede user visual studio code pare ello
