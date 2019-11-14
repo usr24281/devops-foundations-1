@@ -5,19 +5,28 @@
 Para realizar este laboratorio usted necesita:
 
 - Conocimiento de utilizacion de git si no lo tiene verifique el laboratorio [cvs-git](01-cvs-git.md)
-- Workstation con terraform instalado
-- Acceso a una cuenta de AWS 
+- Workstation con terraform instalado [conectarse ssh](Conectarse-ssh.md)
+- Ultima version del codigo de laboratorio [actualizar codigo](actualizar-codigo-fork.md)
 - Un editor de texto de su preferencia
+
+## Objetivo
+
+El objetivo de este laboratorio es instalar los paquetes ansible, docker, y git en un servidor nuevo haciendo bootstraping agregando el parametro userdata a terraform
+
 
 ## Creacion de un servidor en amazon ec2 usando terraform
 
+### Edicion de codigo
+
 - Ingrese en su workstation con la ultima version del codigo
-- Ingrese a la carpeta `cd iac-terraform2-bootstrap`
-- Examine la sintaxis del codigo
+- Examine la sintaxis del codigo puede user visual studio code pare ello
 - Verifique la sintaxis del objeto [template](https://www.terraform.io/docs/providers/template/d/file.html)
 - Verifique la sintaxis del objeto  [ec2-instance](https://www.terraform.io/docs/providers/aws/r/instance.html)
-- Edite su archivo para cumplir la sintaxis
-- Compare su resultado con el resultado en respuestas 
+- Edite su archivo para cumplir la sintaxis puede usar su copia local y visual studio code para hacer mas simple la visualizacion y la edicion del codigo, trate de escribir el codigo usted.
+- Compare su resultado con el resultado en respuestas `/answers/terraform-boostrap` y corrija lo necesario 
+
+### Ejecutar Terraform para crear el servidor
+
 - Para iniciar terraform corra el comando `terraform init`
 - Verifique los cambios que realizara su script corriendo `terraform plan`
 - Ingrese su nombre como nombre de instancia

@@ -3,4 +3,7 @@ nav:
     - Home: index.md
     - Infrastructure-as-Code:
         - Labs: Infrastructure-as-Code/labs.md
+    - Connecion SSH: Infrastructure-as-Code/Conectarse-ssh.md
+    - Actualizar Codigo: Infrastructure-as-Code/actualizar-codigo-fork.md
+
 theme: readthedocs
