@@ -34,4 +34,5 @@ resource "aws_instance" "terraform-lab1" {
   availability_zone = "us-east-1a"
   subnet_id = "subnet-0d45a460e80029489"
   key_name = "demo"
+  user_data = "${data.template_file.user_data.rendered}"
 }
